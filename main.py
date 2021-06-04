@@ -18,10 +18,9 @@ if 'POST' in req_json['method']:
         data = f.read()
         f.close()
     except Exception as error:
-        #print(error)
+        print("#注意：post请求的data文件request_body.bin不存在")
         data = ""
-    code='''#注意：post请求的data文件request_body.bin不存在
-import requests
+    code='''import requests
 headers = %s
 url = "%s"
 data = "%s"
