@@ -26,7 +26,7 @@ url = "%s"
 data = "%s"
 req = requests.post(url=url,headers=headers,data=data,timeout=3)
 print(req.text)
-    '''%(headers,url,data)
+    '''%(headers,url,data.replace('\"','\\"'))
 else:
     code='''import requests
 headers = %s
